@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF_8">
+        <meta http-equiv="X_UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="icon" type="image/jpg" href="images/website logo.jpg">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" height='50' alt="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About me</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>CPE Student</p>
+                    <h1>Hi, My name is <span>Jiraphud<br>Rattanatikanon</span></h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/profile.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>My name is Jiraphud Rattanatikanon, and I am currently studying at KMUTT in the 
+                            Faculty of Computer Engineering's International curriculum. I am a person who easily 
+                            gets along with others and is friendly.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('programming skills')">Programming Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links" onclick="opentab('contact')">Contact</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="programming skills">
+                                <ul>
+                                    <li><span>C</span></li>
+                                    <li><span>CSS,HTML</span></li>
+                                    <li><span>PYTHON</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2023 - Current</span><br>Study at KMUTT</li>
+                                    <li><span>2020 - 2022</span><br>Study at ESC KMUTT</li>
+                                    <li><span>2017 - 2019</span><br>Study at Benjamarachalai School</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="contact">
+                                <ul>
+                                    <li><span>Gmail</span><br>jiraphud.ratt@mail.kmutt.ac.th</li>
+                                    <li><span>Facebook</span><br>Jiraphud Rattanatikanon</li>
+                                    <li><span>Phone number</span><br>082-825-1541</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname)
+            {
+                for(tablink of tablinks)
+                {
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents)
+                {
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+    </body>
+</html>
